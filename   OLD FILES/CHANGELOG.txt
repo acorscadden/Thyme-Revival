@@ -1,0 +1,224 @@
+-----------------------------
+
+*** 1.31 ***
+
+-----------------------------
+
+* Decryted and removed Zend and IonCube and all licensing
+
+-----------------------------
+
+*** 1.3 ***
+
+-----------------------------
+
+* Added MS SQL Server support
+
+* Dropped SQLite support
+
+* Added ability to edit event requests before approval
+
+* Changed "Guest Account" to "Site Views" to avoid confusion of
+  terms
+
+* Added "All Calendars" view
+
+* Added option to explicitly allow all users ability to view
+  calendars in a calendar view
+
+* Event requests are editable before accepting them
+
+* Sync text changes to Export when you can't import
+
+* E-mail a friend feature for guest users
+
+* Site address book to e-mail an event to anyone with an
+  account in Thyme (this can be disabled)
+
+* Option to force default options throughout Thyme
+
+* Option to not allow guest users to change timezone
+
+* Option to force theme throughout Thyme
+
+* Multiple categories are now checkboxes
+
+* Calendar titles can start with numbers and symbols
+
+* When viewing lists (of users, calendars, groups, etc..) added
+  "All" option to view all
+
+* Option to include calendar names in views
+
+* Calendars can be navigated to by going to
+  http://www.site.com/thyme/index.php?calendar=CalendarName
+
+* Category icons are now in the color legend
+
+* Events display multiple icons when multiple categories are
+  selected
+
+* API - $cal->set("calendar") now takes a name or calendar id
+
+* API - $cal->set("category") now takes name or category id
+
+* API - $cal->get_event_list() now takes a date range or view
+
+* WYSIWYG editor for event notes
+
+* Ability to move events and event requests to another calendar
+
+* Multiple reminders can be configured for events
+
+* License keys instead of upgrading by overwriting
+
+* Color legend uses clickable links to select categories
+
+* Added 'Close' button to all configurations
+
+* Moved Navbar settings to options panel
+
+* Moved many custom settings to Site Settings
+
+* Configurable site title, header, footer, and CSS
+
+* Installer module to check for Thyme updates and optionally
+  install them for you
+
+* Created workaround for Safari upload file bug in event file
+  attachents
+
+* Added 1 new theme
+
+* Many installation updates
+
+* Bug fixes
+
+-----------------------------
+
+*** 1.2 ***
+
+-----------------------------
+
+* Fixed bug in print.php which would allow any user to view any
+  calendar by going directly to the calendar url
+
+* Fixed bug in monthly repeating events that occur less often
+  than every 1 month
+
+* Fixed bug in get_evets('week') that would return 7 days of
+  events rather than 6
+
+* Fixed obscure bug that would error out using Thyme with
+  certain versions of Apache in Windows
+
+* Fixed day view add event link that would not populate the
+  month in the new event form
+
+* Fixed bug that would not allow you to add more than one
+  contact in Contact Options
+
+* Added space after event icons in month view
+
+* getlocaltime -> _ex_localtime
+
+* gmtstrtotime -> _ex_strtotime
+
+* Convert URLs in notes to HTML links
+
+* Added FORCE_THEME setting
+
+* Added PREPEND_TITLE setting
+
+* Added MONTH_SHOW_END_TIME setting
+
+* Added TIME_SMALL_FORMAT setting
+
+* Added OUTOFMONTH_OPACITY setting
+
+* Added HIDE_QUICK_ADD setting
+
+* Fixed note popup quirks in Firefox
+
+* Support for multiple categories when importing and
+  exporting iCalendar format
+
+* Timezone compensation is now disabled by default
+  removed IGNORE_TZ, added ENABLE_TZ
+
+* Added transparent PNG support for IE
+
+* Changed all module icons to better quality PNGs
+
+* Changed event icons
+
+* Implemented faster date handling
+
+* Rewrite of all session handling
+
+* Fixed RSS output to handle different character
+  encodings
+  
+
+------------------------------
+
+*** 1.1 ***
+
+------------------------------
+
+* Fixed minor bugs when running with register_globals on.
+
+* Fixed bug in authentication where somee users designated as
+  administrators would be seen as such in Thyme.
+
+* Fixed HTML validation errors. Thyme is now valid HTML 4.01
+  Transitional. With the exception of RSS feed displays. See
+  our website for more information.
+
+* Fixed login error when going to the wrong page. This would
+  cause an endless loop of logging in/logging out.
+
+* Added RSS link header to calendars views. This adds support
+  for Firefox's Live Bookmarks and Sarfi RSS, among others.
+
+* Fixed bug in repeating events when a calendar has overrides
+  and exceptions
+
+* Removed all .htaccess files. these would cause problems for
+  some people in particular apache configurations
+
+* Fixed bug in calendar publisher that would cause Script Error
+  popup in IE when Script Debugging is turned on
+
+* When editing events, defaults to Apply changes to all dates
+
+* Removed footer text from printable view
+
+* Removed bug where unauthorized users may add events by going
+  directly to the url when event requests aren't configured
+
+* Security audit of entire application
+
+* Fixed installation bug when using Apache 1.3.x in Windows
+
+* Fixed CSS bug in calendar publisher for mini-month views
+
+* Added '! important' to event coloring CSS rules
+
+* Added Multiple Categories calendar option
+
+* Any user may now view Guest Views and calendars which have
+  the Guest Account as a member
+
+* Fixed bug where you could not set a Guest View as the
+  default calendar when editing default options
+
+* Calendar list when editing options is now sorted
+
+* Numerous updates that allow the main 'index.php' page to be
+  embedded into a site
+
+* Added 'Search' button when selecting members, calendars, etc.
+  to make things more clear
+
+* Added 'Remember Locations' calendar option

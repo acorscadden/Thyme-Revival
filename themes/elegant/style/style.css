@@ -1,0 +1,217 @@
+
+/*
+// $Id: style.css,v 1.21 2006/04/02 19:10:33 ian Exp $
+*/
+
+div#cal, #cal .body, body.cal { 
+background: #cecece;	
+color: #000;
+}
+
+#cal td { border: 0px solid #fff; }
+
+#cal td h3 { 
+	font-size: 14px; 
+	line-height: 40px;
+   color: #000;
+}
+
+#cal .spaced_table td, #cal .spaced_table th, #cal .spaced_table {
+   padding: 6px;
+   border: 2px solid black;
+   border-spacing: 0px;
+   border-collapse: collapse;
+   border-spacing: 0px;
+}
+
+#cal table, #cal .body, body.cal, div#cal
+{
+font-family: tahoma, verdana, arial, 'sans serif'; 
+font-size: 12px;
+background: #fff;
+color: #000;
+}
+
+#cal form { margin: 0px; padding: 0px; }
+
+/* to achieve a homogenious background of one color the following elements have to have the same color settings: #cal table, #cal .heading, and #cal table .footing */
+
+#cal table
+{
+   background: #e8e8e8;
+   color: #fff;
+}
+
+#cal h3, #cal h2, #cal h1
+{
+   color: #e8e8e8;
+   padding: 0px;
+   margin: 0px;
+}
+
+#cal h1
+{
+   font-weight: normal;
+}
+
+#cal .heading
+{
+	color: #000;
+	background: #e8e8e8;
+	font-size: 16px;
+	font-weight: normal;
+	vertical-align: middle;
+}
+
+#cal a.heading:link { color: #fff; font-weight: normal; }
+#cal a.heading:visited { color: #fff; font-weight: normal;}
+
+#cal a.printview:link { font-size: 10px; }
+#cal a.printview:visited { font-size: 10px; }
+
+#cal .footing a:link {COLOR: #fff ; text-decoration: none; }
+#cal .footing a:visited {COLOR: #fff; text-decoration: none; }
+
+#cal table .footing{
+	background: #e8e8e8;
+}
+
+#cal div.caltabs td.cal_disabled {
+	background: #ffffff url(../images/tabs_bg.gif) 0 0 repeat-x;
+	height:  24px;
+	width: 50px;
+}
+
+#cal th, #cal td.row_header, #cal tr.row_header, #cal div.row_header
+{
+  color: #fff;
+  background: #a3aeb5;
+  font-weight: normal;
+}
+
+#cal table.spaced_table { color: #000; }
+
+#cal .row_header a:link, #cal .row_header a:visited { color: #fff; }
+
+#cal .list_header { background: #999; color: #000; }
+#cal .list_header_hil { background: #b7b7b7; }
+
+#cal .viewbar { background: #cfcfcf; color: #000;}
+#cal .toolbar { background: #eee; color: #000; font-size: 10px; }
+
+#cal a:link {COLOR: #696969; text-decoration: none; }
+#cal a:visited {COLOR: #696969; text-decoration: none; }
+#cal a:active {color: red; text-decoration: underline;}
+#cal a:hover {color: red; text-decoration: underline;}
+
+#cal a.uline:link {color: #696969;text-decoration: none;}
+#cal a.uline:visited {color: #696969;text-decoration: none;}
+#cal a.uline:active {color: red; text-decoration: underline;}
+#cal a.uline:hover {color: red; text-decoration: underline;}
+
+#cal .button { background: #696969; color: #fff;font-size: 10px; padding-left: 10px; padding-right: 10px;}
+
+#cal .main_header { color: #000; padding: 0px; }
+#cal td.main_header { height: 24px;background: #e8e8e8;}
+#cal th.main_header { height: 24px;background: #e8e8e8; }
+#cal a.main_header:link {
+		color: #696969;
+		background: #e8e8e8;
+}
+#cal a.main_header:visited { color: #696969; }
+#cal a.main_header:hover {color: red; text-decoration: underline;}
+
+#cal .cal_content { background: #f5f5f5; color: #000; }
+#cal .cal_disabled { background: #fff; color: #000;}
+
+#cal .cal_disabled a:link, #cal .cal_disabled a:visited { color: #000;}
+
+#cal .cal_selected { background:#a3aeb5; color: #fff; }
+#cal .cal_selected a:link { COLOR: #fff ; text-decoration: none; }
+#cal .cal_selected a:visited { COLOR: #fff; text-decoration: none; }
+#cal .cal_selected a:hover { text-decoration: underline; }
+#cal td.cal_selected, #cal tr.cal_selected { border: none; }
+#cal .cal_selected td { border: 0px; }
+
+#cal td.cal_event_imp {
+   background: #e3e3bb; color: #000;
+}
+#cal font.cal_event_imp { color: #a33; font-weight: bold; }
+#cal a.cal_event_imp:link { color: #a33; font-weight: bold; }
+#cal a.cal_event_imp:visited { color: #a33; font-weight: bold; }
+
+#cal td.cal_event_other {
+   background: #ddddff; font-style: italic; color: #555;
+   border-left: 2px solid #9999ee;
+   border-bottom: 2px solid #9999ee;
+}
+
+#cal td.cal_event {
+   color: #000;
+   border-left: 2px solid #999;
+   border-bottom: 2px solid #999;
+}
+
+
+
+#cal font.cal_event { color: red; }
+#cal a.cal_event:link { color: red; }
+#cal a.cal_event:visited { color: red; }
+
+
+
+#cal tr.hil { background: #cfcfcf; color: #000; }
+#cal td.hil { background: #cfcfcf; color: #000; }
+#cal .hil { background: #cfcfcf; color: #000; }
+
+
+#cal .spacer_tiny { height: 1px; padding: 0px; }
+#cal .spacer_small { height: 2px; width: 2px; padding: 0px; }
+#cal .spacer { height: 20px; width: 20px; padding: 0px; }
+
+#cal div.caltitle h3 { 
+height:  40px;
+background: #ffffff url(../images/header_title_bg.gif) 0 0 repeat-x ; 
+color: #000; 
+padding: 10px 0 0 10px;
+border: none; 
+}
+
+#cal div.caltitle { 
+background: #ffffff;
+border: none; 
+}
+
+#cal div.month_mini table { border-collapse: collapse; border-spacing: 0px; }
+
+#cal div.calnav td.heading, #cal div.calnav th.heading, #cal div.calnav .heading, #cal div.calnav th, #cal div.calnav div, #cal div.calnav marquee
+{
+   color: #000;
+   font-size: 10px;
+   background: #cfcfcf;
+   font-weight: bold;
+}
+
+#cal div.calnav td.row_header
+{
+	font-size: 9px;
+	font-weight: bold;
+}
+
+#cal div.calnav a:link, #cal div.calnav a:visited, #cal div.calnav table, #cal div.calnav td, #cal div.calnav tr, #cal div.calnav th, #cal div.calnav input { font-size: 10px; }
+
+#cal INPUT { vertical-align: middle; }
+
+#cal INPUT           {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px}
+#cal TEXTAREA        {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px}
+#cal SELECT          {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px}
+

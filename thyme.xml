@@ -1,0 +1,21 @@
+<!-- FAKE INSTALL FILE, IGNORE -->
+<mosinstall type="component">
+<name>Thyme Instructions</name>
+<description>&lt;h2 align=&quot;center&quot;&gt;STOP!&lt;/h2&gt;&lt;br&gt;This is not meant to be installed in Joomla. Please see: &lt;a href=&quot;http://www.extrosoft.com/option,com_forum/Itemid,47/page,viewtopic/t,110/&quot; target=_blank&gt;http://www.extrosoft.com/option,com_forum/Itemid,47/page,viewtopic/t,110/&lt;/a&gt;</description>
+<creationDate>04/04/2006</creationDate>
+<author>eXtrovert software</author>
+<copyright>eXtrovert software</copyright>
+<authorEmail>thyme@extrosoft.com</authorEmail>
+<authorUrl>http://www.extrosoft.com/option,com_forum/Itemid,47/page,viewtopic/t,110/</authorUrl>
+<version>1.0</version>
+<files>
+</files>
+<install>
+</install>
+<uninstall>
+</uninstall>
+<installfile>
+</installfile>
+<uninstallfile>
+</uninstallfile>
+</mosinstall>

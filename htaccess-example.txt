@@ -1,0 +1,85 @@
+
+############################
+# PHP under Apache2
+############################
+<IfModule sapi_apache2.c>
+
+# required
+###########
+php_flag magic_quotes_sybase Off
+
+# recommended
+##############
+php_value register_globals "0"
+php_value magic_quotes_gpc "0"
+php_value magic_quotes_runtime "0"
+
+# dependent on event attachment size
+#
+# Set post_max_size to 1M over your
+# upload_max_filesize
+####################################
+php_value post_max_size "11M"
+php_value upload_max_filesize "10M"
+php_value max_input_time "120"
+
+php_value phpa "0"
+
+</IfModule>
+
+#############################
+# PHP4 under Apache 1.3.x
+#############################
+<IfModule mod_php4.c>
+
+# required
+###########
+php_flag magic_quotes_sybase Off
+
+# recommended
+##############
+php_value register_globals "0"
+php_value magic_quotes_gpc "0"
+php_value magic_quotes_runtime "0"
+
+# dependent on event attachment size
+#
+# Set post_max_size to 1M over your
+# upload_max_filesize
+####################################
+php_value post_max_size "11M"
+php_value upload_max_filesize "10M"
+php_value max_input_time "120"
+
+php_value phpa "0"
+
+</IfModule>
+
+#############################
+# PHP5 under 1.3.x
+#############################
+<IfModule mod_php5.c>
+
+# required
+###########
+php_flag magic_quotes_sybase Off
+
+# recommended
+##############
+php_value register_globals "0"
+php_value magic_quotes_gpc "0"
+
+# dependent on event attachment size
+#
+# Set post_max_size to 1M over your
+# upload_max_filesize
+####################################
+php_value post_max_size "11M"
+php_value upload_max_filesize "10M"
+php_value max_input_time "120"
+php_value magic_quotes_runtime "0"
+
+php_value phpa "0"
+
+</IfModule>
+

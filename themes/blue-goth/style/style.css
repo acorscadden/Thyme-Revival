@@ -1,0 +1,221 @@
+/*
+// $Id: style.css,v 1.28 2005/11/24 13:48:16 ian Exp $
+*/
+
+#cal h3 { font-size: 24px; font-weight: normal; }
+
+#cal table, #cal .body, body.cal, div#cal
+{ font-size: 12px; color: #000; font-family: Georgia, "Times New Roman", Times, serif; border: solid 0; }
+
+#cal form { margin: 0px; padding: 0px; }
+
+#cal td { border: 0px solid #000; border-color: #000; }
+
+#cal td.cal_content { background: #f6f6f6; }
+#cal div.month td.cal_content { background: #e7e7e7; }
+#cal div.year td.cal_content { background: #f6f6f6; }
+#cal td.cal_content .cal_content { background: #f6f6f6; }
+#cal div.month td.cal_content .cal_content { background: #e7e7e7; }
+#cal div.month_mini td.cal_content .cal_content { background: #e7e7e7; }
+#cal div.year td.cal_content .cal_content { background: #f6f6f6; }
+#cal table.bounding_table { color: #000; }
+
+#cal h3, #cal h2, #cal h1
+{
+   color: #818181;
+   padding: 0;
+   margin: 0;
+   background: #fff;
+}
+
+#cal h1 { font-weight: normal; }
+
+#cal table.heading, #cal td.heading, #cal th.heading
+{
+   color: #000;
+   font-size: 20px;
+   padding-left: 4px;
+   padding-right: 4px;
+}
+
+#cal .heading { vertical-align: middle;}
+
+#cal a.heading:link { color: #3c65bc; }
+#cal a.heading:visited { color: #3c65bc; }
+
+#cal a.printview:link { font-size: 10px; }
+#cal a.printview:visited { font-size: 10px; }
+
+
+#cal .footing a:link {  }
+#cal .footing a:visited {  }
+#cal .footing { color: #777; }
+
+#cal th, #cal td.row_header, #cal tr.row_header
+{
+  background: #e7e7e7; color: #3a3a3a;
+}
+#cal div.month th, #cal div.month td.row_header, #cal div.month tr.row_header, #cal div.month_mini th.row_header { color: #fff; background: #0071b6; }
+#cal div.eventlist td.row_header, #cal div.eventlist tr.row_header { color: #3a3a3a; background: #f6f6f6; }
+#cal div.eventlist th { color: #3a3a3a; background: #fff; }
+#cal .row_header a:link, #cal .row_header a:visited { color: #3c65bc; }
+#cal .row_header a:hover { color: #3977ff; }
+#cal div.month .row_header a:link, #cal div.month .row_header a:visited { color: #fff; }
+#cal div.eventlist .row_header a:link, #cal div.eventlist .row_header a:visited { color: #3c65bc; }
+#cal div.eventlist .hil a:link, #cal div.eventlist .hil a:visited { color: #3c65bc; }
+#cal div.eventlist .hil a:hover { color: #3977ff; }
+#cal .footer { color: #000; background: #fff; text-align: center; border: solid 0 #c0c0c0; }
+
+#cal .list_header, #cal .list_header a:link, #cal .list_header a:visited { vertical-align: middle; background: #e7e7e7; color: #000; }
+#cal .list_header a:hover { color: #3977ff; #e7e7e7; vertical-align: middle; }
+#cal td.list_header { border: 1px solid black; }
+#cal .list_header_hil { vertical-align: middle; color: #000; background: #d3d3d8; border: solid 1px black; }
+
+#cal .viewbar{ color: #000; background-image: none; }
+#cal table.viewbar { border-bottom-style: solid; border-bottom-width: 1px; }
+
+#cal .toolbar { color: #000; font-size: 10px; background-image: none; }
+#cal table.toolbar { background-image: none; }
+
+#cal a:link {COLOR: #3c65bc; text-decoration: none; }
+#cal a:visited {COLOR: #818181; text-decoration: none; }
+#cal a:active {COLOR: #f00;}
+#cal a:hover {COLOR: #3977ff; text-decoration: underline;}
+
+#cal a.uline:link {  }
+#cal a.uline:visited {  }
+#cal a.uline:active {  }
+#cal a.uline:hover {  }
+
+#cal .button { background: #d3d3d8; font-size: 10px; padding-left: 10px; padding-right: 10px; text-align: center; }
+
+#cal .main_header { color: #000; padding: 0px;}
+#cal table.main_header, #cal td.main_header
+{
+   height: 10px;
+   padding: 0px;
+}
+#cal th.main_header { height: 21px; background: #000; color: #ddd; }
+#cal th.main_header a:link, #cal th.main_header a:visited { color: #3c65bc; }
+#cal a.main_header:link { color: #3c65bc; }
+#cal a.main_header:visited { color: #3c65bc; }
+#cal a.main_header:hover {COLOR: #3977ff;}
+
+#cal .cal_content { background: #fff; color: #000; }
+#cal .cal_disabled { background: #f6f6f6; color: #777; }
+#cal div.year .cal_disabled { color: #777; background: #fff; }
+#cal .cal_disabled a:link, #cal td.cal_disabled a:visited { color: #99bcd4; }
+#cal .cal_disabled a:hover { color: #3977ff; }
+#cal .cal_selected { background: #d3d3d8; color: #000; }
+#cal .cal_selected a:link { COLOR: #3c65bc; text-decoration: none; }
+#cal .cal_selected a:visited { COLOR: #3c65bc; text-decoration: none; }
+#cal .cal_selected a:hover { COLOR: #3977ff;}
+
+#cal td.cal_event_imp { background: #d3d3d8; color: #000; border-color: #fff #818181 #818181 #fff; border-style: solid; border-width: 2px; }
+#cal font.cal_event_imp { color: #3c65bc; font-weight: bold; }
+#cal a.cal_event_imp:link { color: #3c65bc; font-weight: bold; }
+#cal a.cal_event_imp:visited { color: #3c65bc; font-weight: bold; }
+#cal a.cal_event_imp:hover { color: #3977ff; font-weight: bold; }
+
+#cal td.cal_event { background: #e2edff; color: #3a3a3a; border-color: #fff #acacac #acacac #fff; border-style: solid; border-width: 1px; }
+
+#cal font.cal_event { color: #000; }
+#cal a.cal_event:link { color: #000; }
+#cal a.cal_event:visited { color: #000; }
+#cal a.cal_event:hover { color: #000; }
+
+
+
+#cal tr.hil { color: black; background: #d3d3d8; }
+#cal td.hil { color: black; background: #d3d3d8; }
+#cal .hil2 { color: black; background: #d3d3d8; }
+
+
+#cal .spacer_tiny { height: 1px; padding: 0px; }
+#cal .spacer_small { height: 2px; width: 2px; padding: 0px; }
+#cal .spacer { height: 20px; width: 20px; padding: 0px; }
+
+#cal .spaced_table td, #cal .spaced_table th, #cal .spaced_table { padding: 8px; border: solid 1px; border-spacing: 0px; border-collapse: collapse; border-spacing: 0px; }
+
+#cal div.month_mini table { border-collapse: collapse; border-spacing: 0px; }
+
+#cal div.calnav a.minicalevent:visited, #cal div.calnav a.minicalevent:link {
+
+   color: #3c65bc;
+   font-weight: bold;
+
+}
+#cal div.caltitle { color: #000; }
+
+#cal div.caltitle h3 { color: #000; font-weight: lighter; font-style: italic; background-image: none; background-repeat: repeat; background-attachment: scroll; background-position: 0 0; border-bottom: 1px solid #c0c0c0; padding: 2px; margin-bottom: 2px; margin-top: 0; }
+
+#cal div.caltitle { padding: 8px; }
+
+#cal div.eventlist tr.hil, #cal div.eventlist td.hil
+{ background: #fff; color: #3a3a3a; }
+
+#cal div.eventlist td { padding: 2px; }
+#cal div.year th.row_header { color: black; background-image: url(../images/subhead_bg.png); }
+#cal div.year table td.cal_content { border: solid 1px #fff; solid white; }
+#cal div.year table td.cal_content a:link {  }
+
+#cal div.caltabs td.cal_disabled { font-size: 14px; border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; height: 24px; background: #f6f6f6; }
+
+#cal div.caltabs td.main_header { font-size: 14px; border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; background: #d3d3d8; }
+
+#cal div.caltabs table { border-collapse: collapse; border-spacing: 0px; width: 100%; }
+#cal div.caltabs table.caltabtable td { border-bottom: 1px solid black; }
+
+#cal div.caltabs td.main_header a:link, #cal div.caltabs td.main_header a:visited { color: #3c65bc; }
+
+#cal div.calnav td.heading, #cal div.calnav th.heading
+{
+   color: #000; /* #AF1700; */
+   font-size: 13px;
+   background: url(../images/subhead_bg.png);
+   font-weight: normal;
+   height: 20px;
+   border-bottom: 1px solid #c0c0c0;
+   
+}
+
+
+#cal .calnav tr.cal_selected td { background: #d3d3d8; } 
+#cal .calnav tr td.cal_selected { background: #d3d3d8; }
+
+#cal div.calnav td.cal_disabled { background: #f6f6f6; color: #777; }
+#cal div.calnav .cal_disabled a:link, #cal div.calnav .cal_disabled a:visited { color: #777; }
+
+#cal .calnav td.row_header, #cal .calnav th.row_header
+{
+
+   font-size: 9px;
+}
+
+#cal .calnav td.spacer_tiny, #cal .calnav tr.spacer_tiny { height: 0px; padding: 0px; display: none; }
+
+#cal .calnav tr.cal_content td { background: #e7e7e7; }
+
+
+#cal .calnav a:link, #cal .calnav a:visited, #cal .calnav table, #cal .calnav td, #cal .calnav tr, #cal .calnav th, #cal .calnav input { font-size: 10px; }
+
+#cal .calnav a:link, #cal .calnav a:visited { color: #31639C; }
+#cal .year a:link, #cal .year a:visited { color: #31639c; }
+#cal .year a:hover { color: #3977ff; text-decoration: underline; }
+#cal .calnav table.bounding_table { border: solid 0 #c0c0c0; }
+
+#cal INPUT { vertical-align: middle; }
+#cal INPUT           {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: arial; BORDER-RIGHT-WIDTH: 1px}
+#cal TEXTAREA        {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: arial; BORDER-RIGHT-WIDTH: 1px}
+#cal SELECT          {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: arial; BORDER-RIGHT-WIDTH: 1px}
+#cal FORM            {FONT-FAMILY: arial; FONT-SIZE: 10px; }
+

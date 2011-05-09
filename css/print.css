@@ -1,0 +1,86 @@
+
+table,body,.body
+{
+font-family: tahoma, verdana, arial, 'sans serif'; 
+font-size: 12px;
+}
+
+table.cal_content
+{
+   border: 0px;
+}
+
+td, th { background: #fff; }
+
+h3,h2,h1
+{
+   color: #a33;
+   padding: 0px;
+   margin: 0px;
+}
+
+h1
+{
+   font-weight: none;
+}
+
+table.main { background: #000; border-collapse: collapse;}
+
+.print_heading
+{
+   color: #a33;
+}
+
+
+.heading
+{
+   color: #000;
+   font-size: 20px;
+   font-weight: bold;
+   vertical-align: middle;
+   border: 4px;
+}
+
+th { color: #a33; }
+
+table.printing td , td.printing {
+   border-left: 1px solid #aaa;
+   border-top: 1px solid #aaa;
+   border-bottom: 2px solid #aaa;
+   border-right: 2px solid #aaa;
+}
+
+font.cal_event { color: #003366; }
+font.cal_event_imp { font-weight: bold; color: #003366; }
+font.cal_event_other { font-style: italic; }
+
+a.heading:link { color: #fff; font-size: 10px; font-weight: normal; }
+a.heading:visited { color: #fff; font-size: 10px; font-weight: normal;}
+
+a:visited {COLOR: navy; text-decoration: none; }
+a:active {COLOR: #a33;}
+a:hover {COLOR: #a33; text-decoration: underline;}
+
+a.disabled:link { display: none; }
+a.disabled:visited { display: none; }
+font.disabled { display: none; }
+
+td.cal_event { border-bottom: 2px; }
+
+#month font.content { font-weight: bold; }
+#month font.disabled { display: block; }
+
+.spacer_tiny { display: none; height: 1px; padding: 0px; }
+.spacer_small { display: none; height: 2px; width: 2px; padding: 0px; }
+.spacer { height: 20px; width: 20px; padding: 0px; }
+
+#day .cal_content { border-top: 1px solid #000; border-bottom: 1px solid #000; background: #fff; }
+
+#year table.main { background: #000; border: 1px; }
+#year table td b {
+
+   color: #31639C;
+   font-weight: bold;
+
+}
+

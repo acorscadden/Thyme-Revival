@@ -1,0 +1,283 @@
+/* $Id: style.css,v 1.27 2006/02/26 22:00:18 root Exp $ */
+
+#cal h3 { font-size: 18px; }
+
+#cal td { border: 0px solid #fff; }
+
+#cal .spaced_table td, #cal .spaced_table th, #cal .spaced_table {
+   padding: 4px;
+   border: 2px solid #000;
+   border-spacing: 0px;
+   border-collapse: collapse;
+}
+
+body.cal
+{
+   background-image: url(../images/bg.gif);
+}
+
+#cal a.body:link, #cal a.body:visited { color: #000; }
+
+#cal form { margin: 0px; padding: 0px; }
+
+#cal table, div#cal, #cal .body
+{
+   font-family: tahoma, verdana, arial; 
+   font-size: 12px;
+}
+
+#cal table
+{
+   background: #000;   
+   color: #fff;
+}
+
+#cal h3,#cal h2,#cal h1
+{
+   color: #bbe2bb;
+   padding: 0px;
+   margin: 0px;
+}
+
+#cal span
+{
+
+   color: #dfd;
+}
+
+#cal h1
+{
+   font-weight: normal;
+}
+
+#cal td.grad_left
+{
+   background-image: url(../images/tab_bg_left.jpg);
+   background-position: left bottom;
+   background-repeat: repeat-y;
+
+}
+
+#cal td.grad_right
+{
+   background-image: url(../images/tab_bg_right.jpg);
+   background-position: right bottom;
+   background-repeat: repeat-y;
+
+}
+
+#cal .cal_content { background: #999; color: #000; }
+#cal font.cal_content { color: #fff; }
+
+#cal .bounding_table
+{
+
+   border: 0px;
+   border-spacing: 0px;
+   border-collapse: collapse;
+   padding: 0px;
+   background: #000;
+
+}
+
+#cal table.heading, #cal td.heading, #cal tr.heading, #cal th.heading
+{
+
+   background: #000;
+   color: #fff;
+   font-size: 20px;
+   font-weight: bold;
+   border: 0px;
+   border-spacing: 0px;
+   border-collapse: collapse;
+}
+
+#cal .heading { vertical-align: middle; }
+
+#cal a.heading:link { color: #fff; font-weight: normal; }
+#cal a.heading:visited { color: #fff; font-weight: normal;}
+
+#cal a.printview:link { font-size: 10px; }
+#cal a.printview:visited { font-size: 10px; }
+
+#cal .footing a:link {COLOR: #fff; text-decoration: none; }
+#cal .footing a:visited {COLOR: #fff; text-decoration: none; }
+#cal .footing a:hover {COLOR: #a33;}
+
+#cal .viewbar { background: #bbb; color: #000; }
+
+#cal td.row_header, #cal th, #cal tr.row_header, #cal div.row_header { background: #777; color: #fff; }
+#cal a.row_header:link { color: #eee; }
+#cal a.row_header:visited { color: #eee; }
+
+#cal .list_header { background: #888; color: #000; }
+#cal .list_header_hil { background: #aaa; }
+
+#cal .toolbar { background-image: url(../images/bg.gif); color: #000; }
+
+#cal a.toolbar:link { color: #000; }
+#cal a.toolbar:visited { color: #000; }
+
+#cal a.uline:link { text-decoration: underline; }
+#cal a.uline:visited { text-decoration: underline; }
+#cal a.uline:active { text-decoration: underline; }
+#cal a.uline:hover { text-decoration: underline; }
+
+#cal .cal_disabled { background: #555555; color: #999; }
+#cal a.cal_disabled:visited, #cal a.cal_disabled:link, #cal .cal_disabled a:visited, #cal .cal_disabled a:link { color: #999; }
+
+#cal .cal_selected { background: #ddd; color: #000; }
+#cal .cal_selected a:link {COLOR: #000; }
+#cal .cal_selected a:visited {COLOR: #000; }
+#cal .cal_selected a:hover {COLOR: #000;}
+
+#cal td.cal_event_imp {
+   background: #bcb; color: #000;
+   border-left: 2px solid #797;
+   border-bottom: 2px solid #797;
+}
+#cal font.cal_event_imp { color: #a33; font-weight: bold; }
+#cal a.cal_event_imp:link { color: #a33; font-weight: bold; }
+#cal a.cal_event_imp:visited { color: #a33; font-weight: bold; }
+
+#cal td.cal_event {
+   background: #bbbbd3; color: #000;
+   border-left: 2px solid #31639C;
+   border-bottom: 2px solid #31639C;
+}
+#cal font.cal_event { color: navy; font-weight: normal; }
+#cal a.cal_event:link { color: navy; font-weight: normal; }
+#cal a.cal_event:visited { color: navy; font-weight: normal; }
+
+#cal td.cal_event_other {
+   background: #e3e3bb; color: #777; font-style: italic;
+   border-left: 2px solid #a3a333;
+   border-bottom: 2px solid #a3a333;
+}
+
+#cal .hil { background: #000; color: #bbe2bb; }
+#cal a.hil:link { color: #bbe2bb; }
+#cal a.hil:visited { color: #bbe2bb; }
+#cal .spacer_tiny { height: 1px; padding: 0px; }
+#cal .spacer_small { height: 2px; width: 2px; padding: 0px; }
+#cal .spacer { height: 20px; width: 20px; padding: 0px; }
+
+#cal a:link { COLOR: #fff; text-decoration: none; }
+#cal a:visited { COLOR: #fff; text-decoration: none; }
+#cal a:active { COLOR: #fff;}
+#cal a:hover { COLOR: #a33; text-decoration: underline;}
+
+
+#cal div.caltitle h3 { padding: 4px; border: 2px solid #c0c0c0; background: #000000; }
+
+#cal div.caltabs td.cal_disabled, #cal div.caltabs td.cal_selected
+{
+  background-image: url(../images/tab_bg.gif);
+  background-position: 0px 1px;
+  border: 1px solid #999;
+  height: 20px;
+  color: #0f0;
+}
+
+#cal div.caltabs td.main_header { background: #000; }
+#cal div.caltabs td.cal_selected a:link, #cal div.caltabs td.cal_selected a:visited { color: #fff; }
+
+#cal div.year th.row_header a:link, #cal div.year th.row_header a:visited { color: #fff; }
+#cal div.year .cal_content a:link, #cal div.year .cal_content a:visited { color: #fff; }
+
+#cal div.eventlist a.row_header:link, #cal div.eventlist a.row_header:visited, #cal div.eventlist a:link, #cal div.eventlist a:visited, #cal div.eventlist .hil a:link, #cal div.eventlist .hil a:visited
+{COLOR: #000; text-decoration: underline; }
+
+#cal div.eventlist td.row_header { background: #bbcbbb; color: #000; }
+#cal div.eventlist .hil { background: #bbbbd3; color: #000; }
+
+#cal div.month_mini table { border-collapse: collapse; }
+
+#cal div.calnav a.main_header:link { color: #fff; }
+#cal div.calnav a.main_header:visited { color: #fff; }
+#cal div.calnav a.main_header:hover {COLOR: #a33;}
+
+
+#cal div.calnav a:link, #cal div.calnav a:visited, #cal div.calnav table, #cal div.calnav td, #cal div.calnav tr, #cal div.calnav th, #cal div.calnav input { font-size: 10px; }
+
+#cal div.calnav .main_header { background: #000; color: #000; padding: 0px;}
+
+#cal div.calnav table, #cal div.calnav td.row_header, #cal div.calnav .bounding_table
+{
+   text-align: center;
+   background: #000;
+   border: 0px;
+   border-collapse: collapse;
+   padding: 0px;
+   border-spacing: 0px;
+}
+
+#cal div.calnav th.row_header
+{
+   font-weight: bold;
+   background: #000;
+}
+
+#cal div.calnav .cal_selected
+{
+   color: #000;
+   background: #fff;
+}
+
+#cal a.minicalevent:visited, #cal a.minicalevent:link, #cal div.year a.minicalevent:link, #cal div.year a.minicalevent:visited {
+
+   color: #dddd00;
+
+}
+
+#cal div.calnav th.heading, #cal div.calnav td.heading, #cal div.calnav .heading, #cal div.calnav div, #cal div.calnav marquee
+{
+   font-size: 10px;
+   color: #fff;
+   vertical-align: middle;
+   background: #000;
+   background-image: url(../images/mini_header.gif); 
+   background-repeat: no-repeat;
+   background-position: center;
+   padding: 0px;
+}
+
+#cal div.calnav div { font-size: 10px; color: #ccc; background: #000; }
+
+#cal div.main_footer .cal_disabled { color: #bbb; }
+#cal div.main_footer a.main_header:link { color: #fff; }
+#cal div.main_footer a.main_header:visited { color: #fff; }
+
+
+#cal .button {
+   font-size: 10px;
+   background-image: url(../images/tab_bg.gif);
+   color: #fff;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   border: 1px solid #dddddd;
+
+}
+
+
+#cal INPUT           {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px; vertical-align: middle; }
+
+
+#cal TEXTAREA        {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px;
+}
+
+#cal SELECT          {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px;
+background-image: url(../images/bg.gif);
+}
+

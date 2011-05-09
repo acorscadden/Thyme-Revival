@@ -1,0 +1,245 @@
+/*
+// $Id: style.css,v 1.26 2006/04/06 16:00:51 ian Exp $
+*/
+
+#cal h3 { font-size: 18px; }
+
+#cal td { border: 0px solid #fff; }
+
+#cal table, #cal .body, body.cal, div#cal
+{
+font-family: tahoma, verdana, arial, 'sans serif'; 
+font-size: 12px;
+color: #000;
+border: 0px;
+}
+
+div#cal, #cal .body, body.cal { background-image: url(../images/pattern.gif); }
+
+#cal form { margin: 0px; padding: 0px; }
+
+#cal table
+{
+   background: #aaa;
+   color: #fff;
+}
+
+
+#cal h3, #cal h2, #cal h1
+{
+   color: #553300;
+   padding: 0px;
+   margin: 0px;
+}
+
+#cal h1
+{
+   font-weight: normal;
+}
+
+#cal table.heading, #cal td.heading, #cal tr.heading
+{
+   color: #553300;
+   font-size: 20px;
+   height: 32px;
+   font-weight: bold;
+   padding: 0px;
+}
+
+#cal .heading { vertical-align: middle;}
+
+#cal a.heading:link { color: #553300; font-weight: bold; }
+#cal a.heading:visited { color: #553300; font-weight: bold;}
+
+#cal a.printview:link { font-size: 10px; }
+#cal a.printview:visited { font-size: 10px; }
+
+
+#cal .footing a:link {COLOR: #663300; text-decoration: none; font-weight: bold; }
+#cal .footing a:visited {COLOR: #663300; text-decoration: none; font-weight: bold; }
+#cal .footing { color: #777; font-weight: bold; }
+
+#cal th, #cal td.row_header, #cal tr.row_header, #cal div.row_header
+{
+  background: #c1cede; color: #000;
+}
+
+#cal .row_header a:link, #cal .row_header a:visited { color: navy; }
+
+#cal .footer { color: #553300; }
+
+#cal .list_header, #cal .list_header a:link, #cal .list_header a:visited { vertical-align: middle; background: #777; color: #fff; }
+#cal td.list_header { border: 1px solid black; }
+#cal .list_header_hil { vertical-align: middle; background: #aaa; color: #000; border: 1px solid black; }
+
+#cal .viewbar { background: #c1cede; color: #000;}
+#cal table.viewbar { border: 1px solid black; }
+
+#cal .toolbar { background-image: url(../images/pattern.gif); color: #000; font-size: 10px; padding: 2px; }
+#cal table.toolbar { border: 1px solid black; }
+
+#cal a:link {COLOR: navy; text-decoration: none; }
+#cal a:visited {COLOR: navy; text-decoration: none; }
+#cal a:active {COLOR: #a33;}
+#cal a:hover {COLOR: #a33; text-decoration: underline;}
+
+#cal a.uline:link { text-decoration: underline; }
+#cal a.uline:visited { text-decoration: underline; }
+#cal a.uline:active { text-decoration: underline; }
+#cal a.uline:hover { text-decoration: underline; }
+
+#cal .button { background: #c1cede; font-size: 10px; padding-left: 10px; padding-right: 10px; }
+
+#cal .main_header { color: #000; padding: 0px;}
+#cal table.main_header, #cal td.main_header
+{
+   height: 21px;
+   padding: 0px;
+}
+#cal th.main_header { height: 21px; background: #000; color: #ddd; }
+#cal th.main_header a:link, #cal th.main_header a:visited { color: #ffaa55; }
+#cal a.main_header:link { color: #553300; font-weight: bold; }
+#cal a.main_header:visited { color: #553300; font-weight: bold; }
+#cal a.main_header:hover {COLOR: #a33;}
+
+#cal .cal_content { background: #fff; color: navy; }
+#cal .cal_disabled { background: #ccc; color: #777;}
+#cal .cal_disabled a:link, #cal .cal_disabled a:visited { color: #777; }
+
+#cal .cal_selected { background: #ffee99; color: #553300; }
+#cal .cal_selected a:link { COLOR: #553300; text-decoration: none; }
+#cal .cal_selected a:visited { COLOR: #553300; text-decoration: none; }
+#cal .cal_selected a:hover { COLOR: #a33;}
+
+#cal td.cal_event_imp {
+   background: #e3e3bb;
+   color: #000;
+   border-left: 2px solid #a3a333;
+   border-bottom: 2px solid #a3a333;
+}
+#cal font.cal_event_imp { color: #a33; font-weight: bold; }
+#cal a.cal_event_imp:link { color: #a33; font-weight: bold; }
+#cal a.cal_event_imp:visited { color: #a33; font-weight: bold; }
+#cal a.cal_event_imp:hover { color: #a33; font-weight: bold; }
+
+#cal td.cal_event_other {
+   background: #ECFFFF;
+   font-style: italic;
+   color: #555;
+   border-left: 2px solid #80B4B4;
+   border-bottom: 2px solid #80B4B4;
+}
+
+
+#cal td.cal_event {
+   background: #FFFFCC;
+   color: #000;
+   border-left: 2px solid #FFDC74;
+   border-bottom: 2px solid #FFDC74;
+}
+
+#cal font.cal_event { color: #A05B00; }
+#cal a.cal_event:link { color: #A05B00; }
+#cal a.cal_event:visited { color: #A05B00; }
+#cal a.cal_event:hover { color: #f00; }
+
+
+
+#cal tr.hil { background: #FFFFCC; color: #000; }
+#cal td.hil { background: #FFFFCC; color: #000; }
+#cal .hil { background: #FFFFCC; color: #000; }
+
+
+#cal .spacer_tiny { height: 1px; padding: 0px; }
+#cal .spacer_small { height: 2px; width: 2px; padding: 0px; }
+#cal .spacer { height: 20px; width: 20px; padding: 0px; }
+
+#cal .spaced_table td, #cal .spaced_table th, #cal .spaced_table {
+   padding: 4px;
+   border: 2px solid black;
+   border-spacing: 0px;
+   border-collapse: collapse;
+   border-spacing: 0px;
+}
+
+
+#cal div.caltitle h3 {
+   background: #FFFFCC;
+   padding: 2px; border-bottom: 1px solid black; border-right: 0px;
+   padding-left: 12px;
+   border-left: 1px solid black;
+   margin-bottom: 2px;
+}
+
+#cal div.caltitle { padding: 8px; }
+
+#cal div.eventlist tr.hil, #cal div.eventlist td.hil, #cal div.eventlist .hil a:link, #cal div.eventlist .hil a:visited
+{ background: #ddddaa; color: #A05B00; }
+
+#cal div.year th.row_header a:link, #cal div.year th.row_header a:visited { color: #bb5500; }
+#cal div.year th.row_header { background-image: url(../images/pattern.gif); }
+
+
+#cal div.caltabs td.cal_disabled {
+border-top: 1px solid black;
+border-left: 1px solid black;
+border-right: 1px solid black;
+height: 24px; background: #ccc;
+}
+
+#cal div.caltabs td.main_header {
+border-top: 1px solid black;
+border-left: 1px solid black;
+border-right: 1px solid black;
+background: #aaa;
+}
+
+#cal div.caltabs td.main_header a:link, #cal div.caltabs td.main_header a:visited { color: #553300; }
+
+#cal div.month_mini table { border-collapse: collapse; border-spacing: 0px; }
+
+#cal div.calnav td.heading, #cal div.calnav th.heading, #cal div.calnav table.heading
+{
+   color: #bb5500;
+   font-size: 10px;
+   background-image: url(../images/pattern.gif);
+   font-weight: bold;
+   height: 20px;
+   
+}
+
+#cal div.calnav div, #cal div.calnav marquee { font-weight: normal; font-size: 10px; background: #ccc; }
+
+#cal div.calnav tr.cal_selected td { background: #ffee99; color: #553300; }
+
+#cal div.calnav td.row_header, #cal div.calnav th.row_header
+{
+
+   font-size: 9px;
+   font-weight: bold;
+}
+
+
+#cal div.calnav td.spacer_tiny, #cal div.calnav tr.spacer_tiny { height: 0px; padding: 0px; display: none; }
+
+
+#cal div.calnav { margin-top: 10px; }
+
+#cal div.calnav a:link, #cal div.calnav a:visited, #cal div.calnav table, #cal div.calnav td, #cal div.calnav tr, #cal div.calnav th, #cal div.calnav input { font-size: 10px; }
+
+#cal div.calnav table.bounding_table { border: 1px solid black; }
+
+#cal INPUT { vertical-align: middle; }
+#cal INPUT           {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px}
+#cal TEXTAREA        {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px}
+#cal SELECT          {BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000;
+BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH:
+1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px;
+FONT-FAMILY: tahoma,arial; BORDER-RIGHT-WIDTH: 1px}
+

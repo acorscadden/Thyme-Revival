@@ -1,0 +1,22 @@
+
+div.cal_note_width {
+   width: expression(maxwidthiehack(this));
+   max-width: 50%;
+}
+
+div.cal_note_popup
+{ 
+   background: #F8F8D0;
+   color: #000;
+   font-size: 10px;
+   font-family: tahoma, arial;
+   width: expression(maxwidthiehack(this));
+   max-width: 50%;
+
+}
+
+div.cal_note_popup a:link, div.cal_note_popup a:visited
+{
+   color: #003969;
+   text-decoration: underline;
+}

@@ -1,0 +1,424 @@
+
+-- 
+--  Table structure for table `calAttachments`
+-- 
+
+CREATE TABLE `_db_pref_Attachments` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `eid` bigint(20) unsigned NOT NULL default '0',
+  `filename` varchar(255) default NULL,
+  `filesize` bigint(20) unsigned default NULL,
+  `filetype` varchar(128) default NULL,
+  `filedata` longblob,
+  PRIMARY KEY  (`id`),
+  KEY `eid` (`eid`),
+  KEY `filetype` (`filetype`,`filename`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_CalendarMembers`
+-- 
+
+CREATE TABLE `_db_pref_CalendarMembers` (
+  `cid` bigint(20) unsigned NOT NULL default '0',
+  `rid` bigint(20) unsigned NOT NULL default '0',
+  `rtype` tinyint(3) unsigned NOT NULL default '0',
+  `access_lvl` tinyint(4) NOT NULL default '0',
+  KEY `cid` (`cid`),
+  KEY `rid` (`rid`,`rtype`),
+  KEY `rid_2` (`rid`),
+  KEY `rtype` (`rtype`),
+  UNIQUE KEY `cid_3` (`cid`,`rid`,`rtype`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_Calendars`
+-- 
+
+CREATE TABLE `_db_pref_Calendars` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `title` varchar(64) NOT NULL default 'calendar',
+  `type` tinyint(3) unsigned NOT NULL default '0',
+  `owner` bigint(20) unsigned NOT NULL default '1',
+  `options` bigint(20) unsigned default NULL,
+  `description` varchar(255) default NULL,
+  `request_pre` text default NULL,
+  `request_post` text default NULL,
+  `request_notify` tinyint(3) unsigned default '0',
+  `request_contact` bigint(20) unsigned default '0',
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calContactOpts`
+-- 
+
+CREATE TABLE `_db_pref_ContactOpts` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `uid` bigint(20) unsigned NOT NULL default '0',
+  `email` varchar(128) default NULL,
+  PRIMARY KEY  (`id`),
+  KEY `uid` (`uid`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_DST`
+-- 
+
+CREATE TABLE `_db_pref_DST` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `title` varchar(55) default NULL,
+  `starttime` int(11) default NULL,
+  `endtime` int(11) NOT NULL default '0',
+  `repeat_on` tinyint(2) NOT NULL default '0',
+  `repeat_on_wday` tinyint(2) NOT NULL default '0',
+  `repeat_on_end` tinyint(2) NOT NULL default '0',
+  `repeat_on_wday_end` tinyint(2) NOT NULL default '0',
+  `rrule_st` varchar(255) default NULL,
+  `rrule_end` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_EventTypes`
+-- 
+
+CREATE TABLE `_db_pref_EventTypes` (
+  `id` bigint(20) unsigned NOT NULL default '0',
+  `name` varchar(30) NOT NULL default '',
+  `icon` varchar(255) default NULL,
+  `background` varchar(32) default NULL,
+  `border` varchar(32) default NULL,
+  `timecolor` varchar(32) default NULL,
+  `titlecolor` varchar(32) default NULL,
+  `fontweight` varchar(32) default NULL,
+  `fontstyle` varchar(32) default NULL,
+  `textdecoration` varchar(32) default NULL,
+  `calendar` bigint(20) unsigned NOT NULL default '0',
+  KEY `calendar` (`calendar`),
+  KEY `calendar_2` (`calendar`,`name`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_Events`
+-- 
+
+CREATE TABLE `_db_pref_Events` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `version` bigint(20) unsigned default '1',
+  `uid` varchar(255) default NULL,
+  `owner` bigint(20) unsigned NOT NULL default '1',
+  `org_name` varchar(255) default NULL,
+  `org_email` varchar(255) default NULL,
+  `url` varchar(255) default NULL,
+  `override_id` bigint(20) unsigned default '0',
+  `override_date` bigint(20) default NULL,
+  `etype` bigint(20) unsigned default '0',
+  `calendar` bigint(20) unsigned NOT NULL default '1',
+  `flag` tinyint(1) default '0',
+  `title` varchar(255) default 'EVENT',
+  `notes` text,
+  `starttime` bigint(20) NOT NULL default '0',
+  `endtime` bigint(20) default NULL,
+  `next` bigint(20) default NULL,
+  `allday` tinyint(1) default '1',
+  `duration` time default '00:00:00',
+  `freq` tinyint(3) default NULL,
+  `finterval` int(11) default NULL,
+  `byday` varchar(255) default NULL,
+  `bymonthday` varchar(255) default NULL,
+  `bymonth` varchar(255) default NULL,
+  `icon` varchar(255) default NULL,
+  `bysetpos` varchar(255) default NULL,
+  `wkst` int(11) default NULL,
+  `timezone` float default '0',
+  `dst` tinyint(4) default NULL,
+  `location` varchar(255) default NULL,
+  `addr_st` varchar(40) default NULL,
+  `addr_ci` varchar(40) default NULL,
+  `phone` varchar(30) default NULL,
+  `end_after` int(11) default NULL,
+  `added` bigint(20) unsigned NOT NULL default '0',
+  `updated` bigint(20) unsigned NOT NULL default '0',
+  `use_tz` tinyint(3) unsigned default '1',
+  PRIMARY KEY  (`id`),
+  KEY `calendar` (`calendar`),
+  KEY `etype` (`etype`,`calendar`),
+  KEY `override_id` (`override_id`),
+  KEY `override_date` (`override_date`),
+  KEY `starttime` (`starttime`),
+  KEY `calendar_3` (`calendar`,`etype`),
+  KEY `freq` (`freq`),
+  KEY `finterval` (`finterval`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calExceptions`
+-- 
+
+CREATE TABLE `_db_pref_Exceptions` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `eid` bigint(20) unsigned NOT NULL default '0',
+  `exdate` bigint(20) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
+  KEY `eid` (`eid`),
+  KEY `eid_2` (`eid`,`exdate`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calGroupMembers`
+-- 
+
+CREATE TABLE `_db_pref_GroupMembers` (
+  `gid` bigint(20) unsigned NOT NULL default '0',
+  `uid` bigint(20) unsigned NOT NULL default '0',
+  KEY `gid` (`gid`),
+  KEY `uid` (`uid`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calGroups`
+-- 
+
+CREATE TABLE `_db_pref_Groups` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `name` varchar(128) NOT NULL default '',
+  `description` varchar(255) default '',
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calModuleSettings`
+-- 
+
+CREATE TABLE `_db_pref_ModuleSettings` (
+  `module` varchar(32) NOT NULL default '',
+  `variable` varchar(32) NOT NULL default '',
+  `setting` varchar(128) default NULL,
+  `uid` bigint(20) unsigned default NULL,
+  KEY `setting` (`uid`,`module`,`variable`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_NavModules`
+-- 
+
+CREATE TABLE `_db_pref_NavModules` (
+  `module` varchar(32) NOT NULL default '',
+  `mod_order` int(11) default NULL,
+  `uid` bigint(20) unsigned NOT NULL default '0',
+  `leftright` tinyint(3) unsigned default '0',
+  KEY `uid` (`uid`),
+  KEY `uid_2` (`uid`,`mod_order`),
+  PRIMARY KEY(`module`,`uid`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calNotifications`
+-- 
+
+CREATE TABLE `_db_pref_Notifications` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `uid` bigint(20) unsigned NOT NULL default '0',
+  `cid` bigint(20) unsigned NOT NULL default '0',
+  `name` varchar(32) default NULL,
+  `etype` bigint(20) unsigned default NULL,
+  `titlecontains` varchar(32) default NULL,
+  `contact` bigint(20) unsigned default '0',
+  PRIMARY KEY  (`id`),
+  KEY `cid` (`cid`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calRSSModule`
+-- 
+
+CREATE TABLE `_db_pref_RSSModule` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `title` varchar(32) default NULL,
+  `url` varchar(255) default NULL,
+  `upd_interval` int(10) unsigned default NULL,
+  `username` varchar(32) default NULL,
+  `password` varchar(32) default NULL,
+  `style` varchar(32) default NULL,
+  `scrolling` tinyint(3) unsigned default '0',
+  `description` varchar(255) default NULL,
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calReminders`
+-- 
+
+CREATE TABLE `_db_pref_Reminders` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `eid` bigint(20) unsigned NOT NULL default '0',
+  `uid` bigint(20) unsigned NOT NULL default '0',
+  `remindtime` bigint(20) unsigned NOT NULL default '0',
+  `contact` bigint(20) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`),
+  KEY `eid` (`eid`),
+  KEY `uid` (`uid`,`eid`,`remindtime`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calRequests`
+-- 
+
+CREATE TABLE `_db_pref_Requests` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `serial` int(10) unsigned default '0',
+  `uid` varchar(255) default NULL,
+  `owner` bigint(20) unsigned NOT NULL default '1',
+  `org_name` varchar(255) default NULL,
+  `org_email` varchar(255) default NULL,
+  `url` varchar(255) default NULL,
+  `override_id` bigint(20) unsigned default '0',
+  `override_date` bigint(20) default NULL,
+  `etype` bigint(20) unsigned default '0',
+  `calendar` bigint(20) unsigned NOT NULL default '1',
+  `flag` tinyint(1) default '0',
+  `title` varchar(255) default 'EVENT',
+  `notes` text,
+  `starttime` bigint(20) default NULL,
+  `endtime` bigint(20) default NULL,
+  `next` bigint(20) default NULL,
+  `allday` tinyint(1) default '1',
+  `duration` time default '00:00:00',
+  `freq` tinyint(3) default NULL,
+  `finterval` int(11) default NULL,
+  `byday` varchar(255) default NULL,
+  `bymonthday` varchar(255) default NULL,
+  `bymonth` varchar(255) default NULL,
+  `icon` varchar(255) default NULL,
+  `bysetpos` varchar(255) default NULL,
+  `wkst` int(11) default NULL,
+  `timezone` float default '0',
+  `dst` tinyint(4) default NULL,
+  `location` varchar(255) default NULL,
+  `addr_st` varchar(40) default NULL,
+  `addr_ci` varchar(40) default NULL,
+  `phone` varchar(30) default NULL,
+  `end_after` int(11) default NULL,
+  `added` bigint(20) unsigned NOT NULL default '0',
+  `updated` bigint(20) unsigned NOT NULL default '0',
+  `request_notify` tinyint(3) unsigned default '0',
+  `request_notes` varchar(255) default NULL,
+  `request_contact` varchar(128) default NULL,
+  `use_tz` tinyint(3) unsigned default '1',
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calSessions`
+-- 
+
+CREATE TABLE `_db_pref_Sessions` (
+  `session_id` varchar(32) NOT NULL default '',
+  `session_data` text,
+  `session_expiration` bigint(20) default NULL,
+  PRIMARY KEY  (`session_id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `calSubscriptions`
+-- 
+
+CREATE TABLE `_db_pref_Subscriptions` (
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `uid` bigint(20) unsigned NOT NULL default '0',
+  `calendar` bigint(20) NOT NULL default '0',
+  `view` int(11) default NULL,
+  `contact` bigint(20) unsigned default NULL,
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_UserOptions`
+-- 
+
+CREATE TABLE `_db_pref_UserOptions` (
+  `e_popup` tinyint(1) unsigned default '1',
+  `e_n_popup` tinyint(1) unsigned default '1',
+  `default_view` varchar(10) NOT NULL default 'm',
+  `theme` varchar(32) NOT NULL default 'default',
+  `hour_format` tinyint(1) unsigned NOT NULL default '12',
+  `week_start` tinyint(1) unsigned NOT NULL default '0',
+  `workday_start_hr` tinyint(1) unsigned NOT NULL default '9',
+  `workday_end_hr` tinyint(1) unsigned NOT NULL default '18',
+  `time_interval` tinyint(1) unsigned NOT NULL default '4',
+  `timezone` float NOT NULL default '0',
+  `dst` tinyint(1) NOT NULL default '-1',
+  `id` bigint(20) unsigned NOT NULL default '0',
+  `default_cal` bigint(20) unsigned default '0',
+  `e_size` tinyint(3) unsigned default '0',
+  `e_collapse` tinyint(3) unsigned default '0',
+  `e_typename` tinyint(3) unsigned default '0',
+  `show_weeks` tinyint(3) unsigned default '1',
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+
+--  --------------------------------------------------------
+
+-- 
+--  Table structure for table `_db_pref_Users`
+-- 
+
+CREATE TABLE `_db_pref_Users` (
+  `userid` varchar(32) NOT NULL default '',
+  `pass` varchar(32) default NULL,
+  `name` varchar(128) default NULL,
+  `email` varchar(128) default NULL,
+  `id` bigint(20) unsigned NOT NULL auto_increment,
+  `access_lvl` tinyint(2) default '0',
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM;
+    
+--  --------------------------------------------------------
+--
+--  Table structure for table `_db_pref_GlobalSettings`
+--
+
+CREATE TABLE `_db_pref_GlobalSettings` (
+  `variable` varchar(32) NOT NULL default '',
+  `setting` varchar(255) default NULL,
+  PRIMARY KEY  (`variable`)
+) TYPE=MyISAM;
+
+

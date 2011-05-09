@@ -1,0 +1,66 @@
+<?php
+
+error_reporting(E_ALL ^ (E_NOTICE));
+
+# LANGUAGE SETTING
+#
+# see include/languages
+# for other options
+##############################
+define("_CAL_LANG_", "en_US");
+
+######################
+#
+### SQL
+#
+#####################
+
+# current drivers are:
+#
+# MySQL - "mysql"
+# PostgreSQL - "pgsql"
+# SQLite - "sqlite"
+# Microsoft SQL - "mssql"
+#
+# PostgreSQL
+# ----------
+# for most PostgreSQL default installations,
+# running on the same host, you may have to
+# remove the DBHOST and DBPORT lines
+#
+####################################################
+
+define("_CAL_SQL_DRIVER_", "mysql");
+
+define("_CAL_DBHOST_", "localhost"); # datbase host
+define("_CAL_DBPORT_", "");	     # database port
+
+define("_CAL_DBUSER_", "thyme");     # database user
+define("_CAL_DBPASS_", "");          # database password
+define("_CAL_DBNAME_", "thyme");     # the name of your database
+
+define("_CAL_DBPREFIX_", "thyme_"); # table prefix
+
+##########################################
+#
+### PATHS AND URLS (with trailing slash)
+#
+#########################################
+
+# Note double slashes \\ are requred in Windows
+define("_CAL_BASE_PATH_", "C:\\Inetpub\\wwwroot\\thyme-0.93-zend\\"); # path to thyme
+
+define("_CAL_BASE_URL_", "http://www.myserver.com/thyme-0.93-zend/");   # url to thyme
+
+
+#######################################
+#
+### DO NOT EDIT BELOW THIS LINE
+#
+######################################
+
+require_once(@constant("_CAL_BASE_PATH_") . "include/global_settings.php");
+define("_CAL_ADMIN_USER_", "admin");
+set_magic_quotes_runtime(0);
+require_once(@constant("_CAL_BASE_PATH_") ."include/php-compat.php");
+?>

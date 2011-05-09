@@ -1,0 +1,21 @@
+
+
+THESE FILES MUST BE TRANSFERED IN BINARY MODE.
+
+If see any of the error messages below:
+
+* Fatal error: This encoded file is corrupted
+* Fatal error: Unable to read [X] bytes in [file]
+
+The files where not transferred in binary mode. Please re-upload
+them in binary mode. See:
+
+http://www.extrosoft.com/Frequently_Asked_Questions/Problems_Running_Thyme/Fatal_error%3A_This_encoded_file_is_corrupted/
+
+For more information.
+
+If you can not solve this problem or have any other questions,
+do not hesitate to contact support@extrosoft.com or visit our
+support forums.
+
+Thank you.
