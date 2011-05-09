@@ -55,7 +55,7 @@ define("_CAL_DBPREFIX_", "thyme_");
 ### PATHS AND URLS (with trailing slash)
 #
 #########################################
-define("_CAL_BASE_PATH_", "/Applications/MAMP/htdocs/thymeRevivalNEW/");
+define("_CAL_BASE_PATH_", "/Applications/MAMP/htdocs/thymeRevival/");
 #define("_CAL_BASE_PATH_", "/Applications/MAMP/htdocs/thymeWorking/");
 #define("_CAL_BASE_URL_", "http://localhost");
 define("_CAL_BASE_URL_", "");
@@ -95,5 +95,6 @@ require_once(@constant("_CAL_BASE_PATH_") . "include/global_settings.php");
 #######################################
 define("_CAL_ADMIN_USER_", "admin");
 //set_magic_quotes_runtime(0);
+ini_set('magic_quotes_runtime', 0);
 require_once(@constant("_CAL_BASE_PATH_") ."include/php-compat.php");
 ?>

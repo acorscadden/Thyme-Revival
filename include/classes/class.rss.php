@@ -66,7 +66,7 @@ function get_all()
    $dh = dir(@constant("_CAL_BASE_PATH_")."/modules");
 
    while (false !== ($entry = $dh->read())) {
-
+	
       if(substr($entry, 0,1) == ".") {
          continue;
       }
@@ -86,7 +86,7 @@ function get_all()
    {
 
       # 20 mins minimum interval
-      $_cal_feeds[$f]['interval'] = max(max(_CAL_JOB_INTERVAL_,20),$_cal_feeds[$f]['interval']);
+      $_cal_feeds[$f]['interval'] = max(max(_CAL_JOB_INTERVAL_,1),$_cal_feeds[$f]['interval']);
 
       if(@constant("_CAL_JOB_DEBUG_"))
          echo("Checking RSS feed {$_cal_feeds[$f]['title']} with url: ". $_cal_feeds[$f]['urls'][0] ."\n");
