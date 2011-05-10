@@ -53,7 +53,7 @@ function _cal_rss()
 
 function get_all()
 {
-
+	error_log("here in get_all()");
    $now = time();
 
    $mins = intval(($now % 86400) / 60);
@@ -84,7 +84,7 @@ function get_all()
    ###########################
    foreach(array_keys($_cal_feeds) as $f)
    {
-
+	error_log("here ". $f);
       # 20 mins minimum interval
       $_cal_feeds[$f]['interval'] = max(max(_CAL_JOB_INTERVAL_,1),$_cal_feeds[$f]['interval']);
 
@@ -109,7 +109,7 @@ function get_all()
 
 function get(&$f)
 {
-
+	error_log("here in get()");
    $xml = '';
 
    $single_return = (count($f['urls']) == 1);

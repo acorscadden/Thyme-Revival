@@ -20,6 +20,8 @@ require_once(dirname(__FILE__) . "/include/config.php");
 
 @include_once(_CAL_BASE_PATH_."customize/run_job.php");
 
+#define("_CAL_JOB_DEBUG","_CAL_JOB_DEBUG");
+
 error_reporting(E_ALL ^ (E_NOTICE));
 error_log("jobs.php ran");
 #########################
@@ -50,10 +52,10 @@ if(!@constant("_CAL_JOB_INTERVAL_")) define("_CAL_JOB_INTERVAL_", 5);
 
 
 $jobs = array (
-	'jobs/subscriptions.php' => 30,
-	'jobs/rss.php' => 5,
-	'jobs/notifications.php' => 5,
-	'jobs/reminders.php' => 5
+	'jobs/subscriptions.php' => 1,
+	'jobs/rss.php' => 1,
+	'jobs/notifications.php' => 1,
+	'jobs/reminders.php' => 1
 	);
 # CHECK FOR OTHER JOBS
 ##########################
@@ -90,19 +92,18 @@ if(@constant("_CAL_JOB_DEBUG_")) {
 #############
 foreach(array_keys($jobs) as $j)
 {
-#	error_log("i'm here" . $j);
 	
    if(@constant("_CAL_JOB_DEBUG_")) {
 
-      error_log("checking job $j .. every {$jobs[$j]} minutes ..\n");
+      error_log("checking job $j .. every {$jobs[$j]} minutes ..");
 
      if ((_CAL_JOB_INTERVAL_ > $jobs[$j]) || ((_CAL_JOB_INTERVAL_ < $jobs[$j]) && ($jobs[$j] % _CAL_JOB_INTERVAL_)) 
 	|| ($now % ($jobs[$j] * 60) == 0)) {
 
-        error_log(".. running this job..\n");
+        error_log(".. running this job..");
      } else {
 
-        error_log(".. skipping this job ..\n");
+        error_log(".. skipping this job ..");
 
      }
 
@@ -115,7 +116,6 @@ foreach(array_keys($jobs) as $j)
 
    if(function_exists("run_job")) {
       run_job($j);
-	error_log("i'm here". $j);	
       continue;
    }
 

@@ -35,7 +35,6 @@ class _cal_sql
  
    function _cal_sql($user = null, $pass = null, $db = null, $host = null, $port = null)
    {
-
       global $mambo_opts, $mainframe;
 
       if(!isset($this->_connected) || $this->_connected == FALSE) {
@@ -130,7 +129,6 @@ class _cal_sql
 
    function _connect($user,$pass,$db,$host,$port)
    {
-
       if(!($user || $pass || $db || $host || $port)) {
          $user = @constant("_CAL_DBUSER_");
          $pass = @constant("_CAL_DBPASS_");

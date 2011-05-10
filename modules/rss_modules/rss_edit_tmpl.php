@@ -27,10 +27,10 @@ $_cal_form->print_hidden('rssid');
 ### MINUTE OPTIONS
 #
 ###############################
-$m_interval = max(20,_CAL_JOB_INTERVAL_);
+$m_interval = max(5,_CAL_JOB_INTERVAL_);
 $int_m = array();
 if($m_interval < 60) {
-   for($i = 0; $i < 60; $i += $m_interval) {
+   for($i = 5; $i < 60; $i += $m_interval) {
 
       if($i == 0) $int_m[] = '00';
       else $int_m[$i] = $i;
