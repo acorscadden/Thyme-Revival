@@ -55,11 +55,23 @@ define("_CAL_DBPREFIX_", "thyme_");
 ### PATHS AND URLS (with trailing slash)
 #
 #########################################
-define("_CAL_BASE_PATH_", "/Applications/MAMP/htdocs/thymeRevival/");
-#define("_CAL_BASE_PATH_", "/Applications/MAMP/htdocs/thymeWorking/");
-#define("_CAL_BASE_URL_", "http://localhost");
+
+chdir( dirname( __FILE__));
+define("_CAL_BASE_PATH_", getcwd() . "/" . ".." . "/" );
+
+$url = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+if ($_SERVER["SERVER_PORT"] != "80")
+{
+    $url .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["ORIG_PATH_INFO"];
+} 
+else 
+{
+    $url .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+}
+
 define("_CAL_BASE_URL_", "");
 
+#error_log( $url );
 
 # GLOBAL SETTINGS
 ####################

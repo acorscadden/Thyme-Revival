@@ -123,8 +123,8 @@ if(_ex_http_get(-1)) {
 
 
    $mcr = get_magic_quotes_runtime();
-   set_magic_quotes_runtime(0);
-
+   #set_magic_quotes_runtime(0);
+	ini_set('magic_quotes_runtimte',0);
    $_cal_tmpl->new_row();
 
 

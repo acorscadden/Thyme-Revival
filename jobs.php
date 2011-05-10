@@ -20,7 +20,6 @@ require_once(dirname(__FILE__) . "/include/config.php");
 
 @include_once(_CAL_BASE_PATH_."customize/run_job.php");
 
-#define("_CAL_JOB_DEBUG","_CAL_JOB_DEBUG");
 
 error_reporting(E_ALL ^ (E_NOTICE));
 error_log("jobs.php ran");
