@@ -99,7 +99,7 @@ height: 24px;
 #cal a.main_header:visited { color: #fff; }
 #cal a.main_header:hover {COLOR: #a33;}
 
-#cal .cal_content { background: #fff; color: navy; }
+#cal .cal_content { background: #fff; color: navy;}
 #cal .cal_disabled { background: #ccc; color: #000;}
 
 #cal .cal_selected { background: #6494D0; color: #fff; }
