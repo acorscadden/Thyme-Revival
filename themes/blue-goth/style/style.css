@@ -14,7 +14,7 @@
 #cal td.cal_content { background: #f6f6f6; }
 #cal div.month td.cal_content { background: #e7e7e7; }
 #cal div.year td.cal_content { background: #f6f6f6; }
-#cal td.cal_content .cal_content { background: #f6f6f6; }
+#cal td.cal_content .cal_content { background: #f6f6f6; border-radius: 4em; }
 #cal div.month td.cal_content .cal_content { background: #e7e7e7; }
 #cal div.month_mini td.cal_content .cal_content { background: #e7e7e7; }
 #cal div.year td.cal_content .cal_content { background: #f6f6f6; }

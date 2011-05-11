@@ -226,6 +226,23 @@ function get_type_icons($dim = 16, $sep = " ")
 # CALCULATE TIME TILL OR FROM EVENT
 ####################################
 
+function uptime() {
+    return null;
+}
+
+/*
+
+OLD uptime()
+
+uptime() was used to calculate the time until an event occurs, which was used in
+the emails that got sent to approvers. It was determined that this functionality
+was no longer needed. Currently, this function doesn't work because $this->start 
+doesn't have a value yet. I think that this might be because this class is used
+for requests. class.request.php should probably be used for requests instead.
+
+*/
+
+/*
 function uptime()
 {
 
@@ -233,7 +250,10 @@ function uptime()
    if(@constant("_CAL_NO_EVENT_UPTIME_")) return null;
 
    $diff = ((_ex_toint($this->start / 86400) * 86400) - ((_ex_localtime() / 86400) * 86400));
-
+    error_log( "start: " . date( "m.d.y / H:m:s", $this->start));
+    error_log( "diff: " . $diff );
+    $time = date("m.d.y / H:m:s", _ex_localtime());
+    error_log( "localtime: " . $time );
    if($diff < 0) {
       $diff = abs($diff);
       $ago = " "._AGO_;
@@ -259,11 +279,11 @@ function uptime()
 
    $up .= $ago;
 
-
+    error_log( "up: " . $up );
    return $up;
 
 }
-
+*/
 
 #######################
 #
@@ -282,6 +302,7 @@ function set_localtime($instance = null)
       if($this->freq > 0 && !$this->override_id) {
 
          $this->start_timestamp = $this->start = $this->starttime;
+         error_log("1_start_timestamp: " . $this->starttime);
          $this->end = $this->endtime;
 
          require_once(@constant("_CAL_BASE_PATH_") . "include/classes/class.repeater.php");

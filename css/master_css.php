@@ -72,5 +72,4 @@
    ob_end_clean();
    echo(preg_replace("/<.*?>\s*$/","",preg_replace("/^\s*<.*?>\s*/", "", $css)));
 
-
 ?>

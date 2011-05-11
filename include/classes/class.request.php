@@ -104,7 +104,7 @@ function _cal_request($eid = 0, $instance = 0)
       }
 
 
-   # defailt event we're getting
+   # default event we're getting
    # ready to create..
    } else {
 
@@ -210,7 +210,7 @@ function uptime()
       $ago = " "._AGO_;
    }
 
-
+    error_log("request_start: " . $this->start);
    $days = _ex_toint($diff / 86400);
    $yrs = _ex_toint($days / 365);
    $days -= ($yrs * 365);
@@ -394,7 +394,6 @@ function save()
 
       # force html format
       $this->force_html = 1;
-
       send_event($this->cal_obj->request_contact, $this, $subject, $msg, $htmlmsg);
 
       $_cal_user = new _cal_user($_tmp_usr);
