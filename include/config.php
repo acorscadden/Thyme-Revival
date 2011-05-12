@@ -69,9 +69,8 @@ else
     $url .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
 }
 
-define("_CAL_BASE_URL_", "");
-
-#error_log( $url );
+define("_CAL_BASE_URL_", "http://localhost:8888/thymeRevival/");
+#define("_CAL_BASE_URL_", "");
 
 # GLOBAL SETTINGS
 ####################

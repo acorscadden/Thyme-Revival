@@ -250,10 +250,7 @@ function uptime()
    if(@constant("_CAL_NO_EVENT_UPTIME_")) return null;
 
    $diff = ((_ex_toint($this->start / 86400) * 86400) - ((_ex_localtime() / 86400) * 86400));
-    error_log( "start: " . date( "m.d.y / H:m:s", $this->start));
-    error_log( "diff: " . $diff );
     $time = date("m.d.y / H:m:s", _ex_localtime());
-    error_log( "localtime: " . $time );
    if($diff < 0) {
       $diff = abs($diff);
       $ago = " "._AGO_;
@@ -279,7 +276,6 @@ function uptime()
 
    $up .= $ago;
 
-    error_log( "up: " . $up );
    return $up;
 
 }
@@ -302,7 +298,6 @@ function set_localtime($instance = null)
       if($this->freq > 0 && !$this->override_id) {
 
          $this->start_timestamp = $this->start = $this->starttime;
-         error_log("1_start_timestamp: " . $this->starttime);
          $this->end = $this->endtime;
 
          require_once(@constant("_CAL_BASE_PATH_") . "include/classes/class.repeater.php");

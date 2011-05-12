@@ -22,7 +22,6 @@ require_once(dirname(__FILE__) . "/include/config.php");
 
 
 error_reporting(E_ALL ^ (E_NOTICE));
-error_log("jobs.php ran");
 #########################
 #
 ### GET OS
@@ -94,15 +93,15 @@ foreach(array_keys($jobs) as $j)
 	
    if(@constant("_CAL_JOB_DEBUG_")) {
 
-      error_log("checking job $j .. every {$jobs[$j]} minutes ..");
+      #error_log("checking job $j .. every {$jobs[$j]} minutes ..");
 
      if ((_CAL_JOB_INTERVAL_ > $jobs[$j]) || ((_CAL_JOB_INTERVAL_ < $jobs[$j]) && ($jobs[$j] % _CAL_JOB_INTERVAL_)) 
 	|| ($now % ($jobs[$j] * 60) == 0)) {
 
-        error_log(".. running this job..");
+        #error_log(".. running this job..");
      } else {
 
-        error_log(".. skipping this job ..");
+        #error_log(".. skipping this job ..");
 
      }
 

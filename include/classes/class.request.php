@@ -210,7 +210,6 @@ function uptime()
       $ago = " "._AGO_;
    }
 
-    error_log("request_start: " . $this->start);
    $days = _ex_toint($diff / 86400);
    $yrs = _ex_toint($days / 365);
    $days -= ($yrs * 365);

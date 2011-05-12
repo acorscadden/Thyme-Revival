@@ -305,6 +305,8 @@ if(strlen($_SESSION['cal_char'])) {
    $form->print_footer();
 ?>
 <?php require_once(@constant("_CAL_BASE_PATH_") . "include/js/newWin.js"); ?>
+
+
 <script language='javascript' type='text/javascript'>
 
 // User Functions
@@ -315,6 +317,7 @@ function add_user(selname)
       $url->addArg('form', $form->name);
       echo('var url = \''. $url->toString() ."&selname=' + selname;\n");
    ?>
+    
    newWin(url, 500, 300);
 
 }

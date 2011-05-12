@@ -175,7 +175,6 @@ document.forms[0].uname_search.focus();
 
 function add_user(name, uid)
 {
-
    <?php if($_REQUEST['callback']): ?>
    window.opener.<?php echo($_REQUEST['callback']) ?>(uid, name);
    <?php else: ?>
