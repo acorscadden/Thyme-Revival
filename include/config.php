@@ -61,11 +61,17 @@ chdir( dirname( __FILE__));
 define("_CAL_BASE_PATH_", getcwd() . "/" . ".." . "/" );
 
 #define base url
-$domain = $_SERVER['HTTP_HOST'];
-$path = $_SERVER['SCRIPT_NAME'];
 
-define("_CAL_BASE_URL_", "http://" . $domain . dirname($path) . "/");
+define("_CAL_BASE_URL_", "http://localhost:8888/thymeRevival/" );
 
+#defining like this doesn't work because this file gets included by other files
+#and that will change the base URL
+#
+#for the time being, the above define needs to be manually set when thyme is moved
+#into a different location
+#$path = $_SERVER['SCRIPT_NAME'];
+#$domain = $_SERVER['HTTP_HOST'];
+#define("_CAL_BASE_URL_", "http://" . $domain . dirname($path) . "/" . ".." . "/");
 
 # GLOBAL SETTINGS
 ####################
