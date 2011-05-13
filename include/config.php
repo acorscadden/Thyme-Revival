@@ -56,21 +56,16 @@ define("_CAL_DBPREFIX_", "thyme_");
 #
 #########################################
 
+#define basepath
 chdir( dirname( __FILE__));
 define("_CAL_BASE_PATH_", getcwd() . "/" . ".." . "/" );
 
-$url = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
-if ($_SERVER["SERVER_PORT"] != "80")
-{
-    $url .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["ORIG_PATH_INFO"];
-} 
-else 
-{
-    $url .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-}
+#define base url
+$domain = $_SERVER['HTTP_HOST'];
+$path = $_SERVER['SCRIPT_NAME'];
 
-define("_CAL_BASE_URL_", "http://localhost:8888/thymeRevival/");
-#define("_CAL_BASE_URL_", "");
+define("_CAL_BASE_URL_", "http://" . $domain . dirname($path) . "/");
+
 
 # GLOBAL SETTINGS
 ####################
